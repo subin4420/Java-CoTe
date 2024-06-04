@@ -13,8 +13,8 @@
 
 |  | 백도현 | 오상민 | 오수민 | 이보윤 |
 | --- | --- | --- | ---| ---|
-| 이메일 | 0 | 3 |fivesoomin@gmail.com|0|
-| Git | 0 | 6 |https://github.com/ssooomm|0|
+| 이메일 | dh1010a@naver.com | 3 |fivesoomin@gmail.com|0|
+| Git | https://github.com/dh1010a | 6 |https://github.com/ssooomm|0|
 
 
 <br>
