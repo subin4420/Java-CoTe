@@ -8,8 +8,8 @@
 
 |  | 박수빈 | 서석현 | 공희진 | 배광민 |
 | --- | --- | --- | ---| ---|
-| 이메일 | subin4420@gmail.com | 3 |0|0|
-| Git | https://github.com/subin4420 | 6 |0|0|
+| 이메일 | subin4420@gmail.com | 3 | gmlwls3379@naver.com |0|
+| Git | https://github.com/subin4420 | 6 | https://github.com/heejinkong |0|
 
 |  | 백도현 | 오상민 | 오수민 | 이보윤 |
 | --- | --- | --- | ---| ---|
