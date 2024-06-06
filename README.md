@@ -2,7 +2,7 @@
 2024년 알고리즘 스터디: "[Do it! 알고리즘 코딩테스트 자바편]
 <br>
 <br>
-
+필수 문법 정리 Notion: https://maddening-bowler-d9b.notion.site/2b5bf40acfd7482ea632c41bfd4646b5
 ## 📍팀원
 
 
