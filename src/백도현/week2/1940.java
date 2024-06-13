@@ -12,8 +12,6 @@ public class Main {
 		N = Integer.parseInt(br.readLine());
 		M = Integer.parseInt(br.readLine());
 
-        arr = new int[N];
-
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 
         for (int i = 0; i < N; i++) {
@@ -23,8 +21,7 @@ public class Main {
 
         for (int i = 0; i < N-1; i++) {
             for (int j = i + 1; j < N; j++) {
-
-                if (arr[i] + arr[j] == M) {
+                if (i + j == M) {
                     result++;
                 }
             }
