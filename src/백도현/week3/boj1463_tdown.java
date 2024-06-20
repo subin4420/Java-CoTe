@@ -3,6 +3,9 @@ import java.io.*;
 
 class Main {
 
+    // Integer 배열인 이유 : dp[n]번쨰에 연산이 되었는지 확인하기 위해
+    // null값으로 중복 검사를 하기 위함
+    // int[] 형 배열은 null값을 넣을 수 없음. Integer.MAX_VALUE를 넣던지 해야 함
     static Integer dp[];
 
 
