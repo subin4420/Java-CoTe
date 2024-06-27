@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class ex001 {
+public class Boj11720 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt(); //합할 숫자의 개수 입력받음
