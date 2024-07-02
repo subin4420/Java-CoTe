@@ -31,3 +31,38 @@ class Solution {
         
     }
 }
+
+//== dfs를 이용한 풀이 ==//
+import java.util.*;
+class Solution {
+    int answer = 0;
+    public int solution(int[] nums) {
+        dfs(0, 0, 0, nums);
+        return answer;
+    }
+    
+    public void dfs(int now, int n, int sum, int[] nums) {
+        if (n == 3) {
+            if (isPrime(sum)) answer++;
+            return;
+        } else {
+            for (int i = now; i < nums.length; i++) {
+                dfs(i + 1, n + 1, sum + nums[i], nums);
+            }
+        }
+    }
+    
+    public boolean isPrime(int n) {
+        if (n == 1) return false;
+        if (n == 2 || n == 3) return true;
+        int i = 2;
+        while (i * i <= n) {
+            if (n % i == 0) {
+                return false;
+            }
+            i++;
+        }
+        return true;
+        
+    }
+}
