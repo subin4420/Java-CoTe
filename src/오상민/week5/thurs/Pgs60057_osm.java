@@ -46,8 +46,6 @@ class Solution {
                     after += before;
                 }
             }
-            System.out.println(i + "씩 자를때 최종 문자열 : " + after);
-
             if (answer > after.length()) {
                 answer = after.length();
             }
