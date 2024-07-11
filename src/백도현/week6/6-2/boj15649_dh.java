@@ -4,7 +4,7 @@ import java.util.*;
 public class Main {
     static int N, M;
     static boolean[] visited;
-    static List<Integer> arr;
+    static int[] arr;
 
 
     public static void main(String[] args) throws Exception {
@@ -14,33 +14,34 @@ public class Main {
 		N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
 
-        arr = new ArrayList<>();
-        visited = new boolean[N+1];
+        arr = new int[M];
+        visited = new boolean[N];
 
-        for (int i = 1; i <= N; i++) {
-            dfs(i);
-        }
+
+        dfs(N, M, 0);
         br.close();
     }
 
-    public static void dfs(int n) {
-        arr.add(n);
-        visited[n] = true;
-        if (arr.size() == M) {
-            for(int i = 0; i < arr.size() - 1; i++) {
-                System.out.print(arr.get(i) + " ");
+    public static void dfs(int N, int M, int depth) {
+        if (depth == M) {
+            for(int i = 0; i < M-1; i++) {
+                System.out.print(arr[i] + " ");
             }
-            System.out.print(arr.get(arr.size()-1));
+            System.out.print(arr[M-1]);
             System.out.println();
+
+            return;
         }
 
-        for (int i = 1; i <= N; i++) {
+        for (int i = 0; i < N; i++) {
             if (!visited[i]) {
-                dfs(i);
+                visited[i] = true;
+                arr[depth] = i + 1;
+                dfs(N, M, depth + 1);
+                visited[i] = false;
             }
         }
-        visited[n] = false;
-        arr.remove(arr.indexOf(n));
+        return ;
     }
 
 }
