@@ -20,7 +20,6 @@ public class Main {
         for (int i = 1; i <= N; i++) {
             dfs(i);
         }
-
         br.close();
     }
 
@@ -33,11 +32,11 @@ public class Main {
             }
             System.out.print(arr.get(arr.size()-1));
             System.out.println();
-        } else {
-            for (int i = 1; i <= N; i++) {
-                if (!visited[i]) {
-                    dfs(i);
-                }
+        }
+
+        for (int i = 1; i <= N; i++) {
+            if (!visited[i]) {
+                dfs(i);
             }
         }
         visited[n] = false;
