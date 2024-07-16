@@ -1,31 +1,36 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
-public class leet_permutationSequence_bgm {
-    public static void main(String[] args) {
-        // 예제 List<List<Integer>> 생성
+class leet_permutationSequence_bgm {
+    public String getPermutation(int n, int k) {
         List<List<Integer>> result = new ArrayList<>();
-        List<Integer> sublist1 = new ArrayList<>();
-        sublist1.add(1);
-        sublist1.add(2);
-        sublist1.add(3);
-        result.add(sublist1);
+        boolean[] visited = new boolean[n];
+        int[] nums = new int[n];
+        int idx = 0;
+        for (int i = 1; i <= n; i++) {
+            nums[idx] = i;
+            idx++;
+        }
+        backtrack(new ArrayList<>(), nums, visited, result);
+        String answer = "";
+        answer += result.get(k);
+        return answer;
+    }
 
-        List<Integer> sublist2 = new ArrayList<>();
-        sublist2.add(4);
-        sublist2.add(5);
-        sublist2.add(6);
-        result.add(sublist2);
+    void backtrack(List<Integer> curr, int[]nums, boolean[] visited, List<List<Integer>> result) {
+        if (curr.size() == nums.length) {
+            result.add(new ArrayList<>(curr));
+            return;
+        }
 
-        // k번째 인덱스를 문자열로 변환
-        int k = 1; // 변환할 인덱스 값
-        for (List<Integer> sublist : result) {
-            if (k < sublist.size()) {
-                String stringValue = String.valueOf(sublist.get(k));
-                System.out.println("Before conversion: " + sublist);
-                sublist.set(k, Integer.parseInt(stringValue)); // 실제로 변환하지 않고 출력만
-                System.out.println("After conversion of index " + k + ": " + stringValue);
+        for (int i = 0; i < nums.length; i++) {
+            if (!visited[i]) {
+                continue;
             }
+            curr.add(nums[i]);
+            visited[i] = true;
+            backtrack(curr, nums, visited, result);
+            curr.remove(nums[i]);
+            visited[i] = false;
         }
     }
 }
