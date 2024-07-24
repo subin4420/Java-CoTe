@@ -17,7 +17,6 @@ scoville의 원소는 각각 0 이상 1,000,000 이하입니다.
 모든 음식의 스코빌 지수를 K 이상으로 만들 수 없는 경우에는 -1을 return 합니다.
 */
 
-import java.util.Arrays;
 import java.util.PriorityQueue;
 
 public class pgs42626_by {

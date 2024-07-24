@@ -10,7 +10,7 @@ public class Pgs76502 {
         int answer = 0;
 
         Queue<String> q = new LinkedList<String>();
-        String[] sArr = s.split("");
+        String[] git sArr = s.split("");
         for(String i:sArr){
             q.add(i);
         }
